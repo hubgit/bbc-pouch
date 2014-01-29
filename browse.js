@@ -49,9 +49,7 @@ var list = function() {
 
 		$('#status').hide();
 
-		rows.filter(function(row) {
-			return Object.keys(row.value).length > 1;
-		}).forEach(function(row) {
+		rows.forEach(function(row) {
 			var series = row.value;
 
 			row.value = Object.keys(series).sort(function(a, b) {
