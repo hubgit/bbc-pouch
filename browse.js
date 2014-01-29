@@ -21,6 +21,7 @@ var list = function() {
 				series[segment.series.pid] = {
 					count: 0,
 					pid: segment.series.pid,
+					episode: segment.episode.pid,
 					title: segment.series.title,
 					tracks: [],
 				}

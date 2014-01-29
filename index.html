@@ -34,7 +34,7 @@
 			<div itemscope itemtype="http://schema.org/MusicArtist" class="artist">
 				{{#if key.musicbrainz_gid}}
 				<a href="http://www.bbc.co.uk/music/artists/{{ key.musicbrainz_gid }}"
-					itemprop="url"><span itemprop="name">{{ key.name }}</span></a>
+					itemprop="url" target="_blank"><span itemprop="name">{{ key.name }}</span></a>
 				{{else}}
 				<span itemprop="name">{{ key.name }}</span>
 				{{/if}}
@@ -48,9 +48,9 @@
 		<td>
 			<dl>
 				{{#each value}}
-					<dt><a href="http://www.bbc.co.uk/programmes/{{ pid }}">{{ title }}</a> ({{ count }})</dt>
+					<dt><a href="http://www.bbc.co.uk/programmes/{{ episode }}" target="_blank">{{ title }}</a> ({{ count }})</dt>
 					{{#each tracks}}
-					<dd><a href="http://www.bbc.co.uk/programmes/{{ pid }}">{{ title }}</a></dd>
+					<dd><a href="http://www.bbc.co.uk/programmes/{{ pid }}" target="_blank">{{ title }}</a></dd>
 					{{/each}}
 				{{/each}}
 			</dl>
