@@ -10,7 +10,7 @@ form {
 	display: none;
 }
 
-[itemprop=byArtist] {
+.artist {
 	font-size: 1.5em;
 	color: #444;
 }
