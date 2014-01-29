@@ -21,6 +21,7 @@ var list = function() {
 			if (typeof series[segment.series.pid] === 'undefined') {
 				series[segment.series.pid] = {
 					count: 0,
+					pid: segment.series.pid,
 					title: segment.series.title,
 					tracks: [],
 				}
@@ -40,7 +41,9 @@ var list = function() {
 
 		$('#status').hide();
 
-		rows.forEach(function(row) {
+		rows.filter(function(row) {
+			return Object.keys(row.value).length > 1;
+		}).forEach(function(row) {
 			if (!row.key) {
 				return;
 			}
