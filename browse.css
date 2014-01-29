@@ -1,0 +1,28 @@
+td {
+	vertical-align: top;
+}
+
+td:first-child {
+	max-width: 20em;
+}
+
+form {
+	display: none;
+}
+
+[itemprop=byArtist] {
+	font-size: 1.5em;
+	color: #444;
+}
+
+.badge {
+	background: #bbb;
+}
+
+dt:not(:first-of-type) {
+	margin-top: 5px;
+}
+
+#status {
+	display: none;
+}
