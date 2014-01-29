@@ -4,8 +4,7 @@ var list = function() {
 	$('#status').text('loading data (takes several seconds)…').show();
 
 	Handlebars.registerHelper('pluralize', function(number, single, plural) {
-	  if (number === 1) { return single; }
-	  else { return plural; }
+		return number === 1 ? single : plural;
 	});
 
 	var template = Handlebars.compile($('#track-template').html());
