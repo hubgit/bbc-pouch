@@ -10,7 +10,15 @@ var list = function() {
 	var template = Handlebars.compile($('#artist-template').html());
 
 	var map = function (doc) {
-		emit(doc.primary_contributor, doc);
+		if (doc.primary_contributor) {
+			// handle cases where sometimes a pid is missing
+			var key = {
+				musicbrainz_gid: doc.primary_contributor.musicbrainz_gid,
+				name: doc.primary_contributor.name
+			}
+
+			emit(key, doc);
+		}
 	};
 
 	var reduce = function(artist, segments) {
@@ -44,10 +52,6 @@ var list = function() {
 		rows.filter(function(row) {
 			return Object.keys(row.value).length > 1;
 		}).forEach(function(row) {
-			if (!row.key) {
-				return;
-			}
-
 			var series = row.value;
 
 			row.value = Object.keys(series).sort(function(a, b) {
