@@ -7,7 +7,7 @@ var list = function() {
 		return number === 1 ? single : plural;
 	});
 
-	var template = Handlebars.compile($('#track-template').html());
+	var template = Handlebars.compile($('#artist-template').html());
 
 	var map = function (doc) {
 		emit(doc.primary_contributor, doc);

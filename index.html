@@ -15,7 +15,20 @@
 
 	<div id="status"></div>
 
-	<script type="text/handlebars" id="track-template">
+	<div id="placeholder">loading…</div>
+
+	<p>plus many, many more artists that were only played on one show…</p>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="http://download.pouchdb.com/pouchdb-nightly.min.js"></script>
+	<script src="http://git.macropus.org/jquery-ajax-queue/jquery.ajaxQueue.js"></script>
+	<script src="http://git.macropus.org/jquery-programmes/jquery.programmes.js"></script>
+	<script src="lib/handlebars.js"></script>
+	<script src="update.js"></script>
+	<script src="browse.js"></script>
+	<script>$('#placeholder').load('data.html');</script>
+
+	<script type="text/handlebars" id="artist-template">
 	<tr>
 		<td>
 			<div itemscope itemtype="http://schema.org/MusicArtist" class="artist">
@@ -44,17 +57,4 @@
 		</td>
 	</tr>
 	</script>
-
-	<div id="placeholder">loading…</div>
-
-	<p>plus many, many more artists that were only played on one show…</p>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="http://download.pouchdb.com/pouchdb-nightly.min.js"></script>
-	<script src="http://git.macropus.org/jquery-ajax-queue/jquery.ajaxQueue.js"></script>
-	<script src="http://git.macropus.org/jquery-programmes/jquery.programmes.js"></script>
-	<script src="lib/handlebars.js"></script>
-	<script src="update.js"></script>
-	<script src="browse.js"></script>
-	<script>$('#placeholder').load('data.html');</script>
 </body>
